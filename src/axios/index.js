@@ -11,11 +11,7 @@ export const getPros = () => axios.post('http://api.xitu.io/resources/github', {
     lang: "javascript",
     offset: 0,
     limit: 30
-}).then(function (response) {
-    return response.data;
-}).catch(function (error) {
-    console.log(error);
-});
+}).then( response => response.data ).catch( error => console.log(error));
 
 export const npmDependencies = () => axios.get('./npm.json').then(res => res.data).catch(err => console.log(err));
 
