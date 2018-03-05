@@ -8,7 +8,6 @@ import EchartsViews from './EchartsViews';
 import EchartsProjects from './EchartsProjects';
 import b1 from '../../style/imgs/b1.jpg';
 
-
 class Dashboard extends React.Component {
     render() {
         return (
@@ -112,13 +111,14 @@ class Dashboard extends React.Component {
                                 </div>
                                 <a className="card-tool"><Icon type="sync" /></a>
                                 <ul className="list-group no-border">
+                                    
                                     <li className="list-group-item">
                                         <a href="" className="pull-left w-40 mr-m">
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">鸣人</a>
-                                            <span className="text-muted">终于当上火影了！</span>
+                                            <a href="" className="block">客户</a>
+                                            <span className="text-muted">内容</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -126,8 +126,8 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">佐助</a>
-                                            <span className="text-muted">吊车尾~~</span>
+                                            <a href="" className="block">客户</a>
+                                            <span className="text-muted">内容</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -135,8 +135,8 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">小樱</a>
-                                            <span className="text-muted">佐助，你好帅！</span>
+                                            <a href="" className="block">客户</a>
+                                            <span className="text-muted">内容</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -144,8 +144,17 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">雏田</a>
-                                            <span className="text-muted">鸣人君。。。那个。。。我。。喜欢你..</span>
+                                            <a href="" className="block">客户</a>
+                                            <span className="text-muted">内容</span>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item">
+                                        <a href="" className="pull-left w-40 mr-m">
+                                            <img src={b1} className="img-responsive img-circle" alt="test" />
+                                        </a>
+                                        <div className="clear">
+                                            <a href="" className="block">客户</a>
+                                            <span className="text-muted">内容</span>
                                         </div>
                                     </li>
                                 </ul>

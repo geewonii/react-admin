@@ -1,27 +1,56 @@
-/**
- * Created by 叶子 on 2017/7/30.
- */
-import { combineReducers } from 'redux';
-import * as type from '../action/type';
+import { combineReducers } from 'redux'
+import types from '../action/type'
 
-const handleData = (state = {isFetching: true, data: {}}, action) => {
+const httpData = (state = {isFetching:false}, action) => {
     switch (action.type) {
-        case type.REQUEST_DATA:
-            return {...state, isFetching: true};
-        case type.RECEIVE_DATA:
-            return {...state, isFetching: false, data: action.data};
-        default:
-            return {...state};
-    }
-};
-const httpData = (state = {}, action) => {
-    switch (action.type) {
-        case type.RECEIVE_DATA:
-        case type.REQUEST_DATA:
+        case types.REQUEST_DATA:
+            return {...state, isFetching: action.isFetching}
+        case types.RECEIVE_DATA:
             return {
                 ...state,
-                [action.category]: handleData(state[action.category], action)
-            };
+                data:action.data,
+                [action.category]:action.category
+            }
+        case types.LOADUSER_DATA:
+            return {
+                ...state,
+                userList:action.userList
+            }
+        case types.RENT_DATA:
+            return {
+                ...state,
+                rentList:action.rentList
+            }
+        case types.DRIVER_DATA:
+            return {
+                ...state,
+                driverList:action.driverList
+            }
+        case types.VIO_DATA:
+            return {
+                ...state,
+                vioList:action.vioList
+            }
+        case types.VIOBASIC_DATA:
+            return {
+                ...state,
+                vioBasicList:action.vioBasicList
+            }
+        case types.MESSAGE_DATA:
+            return {
+                ...state,
+                messageList:action.messageList
+            }
+        case types.MESSAGEUSER_DATA:
+            return {
+                ...state,
+                messageUserList:action.messageUserList
+            }
+        case types.USERMESSAGEUSER_DATA:
+            return {
+                ...state,
+                userMessageList:action.userMessageList
+            }
         default:
             return {...state};
     }
